@@ -17,17 +17,35 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\LENOVO\\Downloads\\app-release_sprint4.apk', true)
+WebUI.callTestCase(findTestCase('StartApp'), [:], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Kedaireka/Skip Landing Page'), 0)
+Mobile.tap(findTestObject('Object Repository/BIMA/button/Btn skip'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Lainnya'), 0)
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Modul Kedaireka'), 0)
+Mobile.tap(findTestObject('Garuda/button/Btn Lainnya'), 0)
 
-Mobile.tap(findTestObject('Kedaireka/Lainnya'), 0)
+Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
 
-Mobile.verifyElementExist(findTestObject('Kedaireka/verify/Penjelasan modul kedaireka'), 0)
+Mobile.tap(findTestObject('Object Repository/BIMA/button/Btn login bima'), 0)
+
+Mobile.getText(findTestObject('BIMA/verify/title page login'), 0)
+
+Mobile.swipe(0, 436, 0, 0)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/button/Field username'), 0)
+
+Mobile.tap(findTestObject('BIMA/button/Btn inp username'), 0)
+
+Mobile.setText(findTestObject(null), 'ahmadump@yahoo.co.id', 0)
+
+Mobile.tap(findTestObject('BIMA/button/Field password'), 0)
+
+Mobile.setText(findTestObject(null), '481965ah', 0)
+
+Mobile.tap(findTestObject('BIMA/button/Btn login'), 0)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 

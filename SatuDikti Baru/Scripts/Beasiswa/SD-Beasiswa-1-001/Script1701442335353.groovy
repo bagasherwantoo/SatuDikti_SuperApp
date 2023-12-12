@@ -17,17 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\LENOVO\\Downloads\\app-release_sprint4.apk', true)
+WebUI.callTestCase(findTestCase('StartApp'), [:], FailureHandling.STOP_ON_FAILURE)
 
-Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(10)
 
-Mobile.tap(findTestObject('Kedaireka/Skip Landing Page'), 0)
+Mobile.tap(findTestObject('Object Repository/Beasiswa/button/nextbtn1'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Lainnya'), 0)
+Mobile.tap(findTestObject('Object Repository/Beasiswa/button/nextbtn2'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Modul Kedaireka'), 0)
+Mobile.tap(findTestObject('Object Repository/Beasiswa/button/BtnMulai'), 0)
 
-Mobile.tap(findTestObject('Kedaireka/Lainnya'), 0)
+Mobile.tap(findTestObject('Object Repository/Beasiswa/button/BtnBeasiswa'), 0)
 
-Mobile.verifyElementExist(findTestObject('Kedaireka/verify/Penjelasan modul kedaireka'), 0)
+WebUI.delay(5)
+
+Mobile.closeApplication()
 

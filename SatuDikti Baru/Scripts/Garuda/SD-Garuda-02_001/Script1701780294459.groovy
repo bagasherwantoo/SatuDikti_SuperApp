@@ -17,17 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\LENOVO\\Downloads\\app-release_sprint4.apk', true)
+Mobile.startApplication('D:\\MAGANG\\Dokumentasi Manual Case Satudikti\\Sprint 12\\app-release (12).apk', true)
 
 Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Kedaireka/Skip Landing Page'), 0)
+Mobile.tap(findTestObject('Garuda/button/Btn skip'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Lainnya'), 0)
+Mobile.tap(findTestObject('Garuda/button/Btn Lainnya'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Kedaireka/Modul Kedaireka'), 0)
+Mobile.tap(findTestObject('Garuda/button/Btn Garuda'), 0)
 
-Mobile.tap(findTestObject('Kedaireka/Lainnya'), 0)
+Mobile.tap(findTestObject('Object Repository/Garuda/button/Btn search bar (1)'), 0)
 
-Mobile.verifyElementExist(findTestObject('Kedaireka/verify/Penjelasan modul kedaireka'), 0)
+Mobile.tap(findTestObject('Object Repository/Garuda/button/Btn cari layanan'), 0)
+
+Mobile.setText(findTestObject('Object Repository/Garuda/button/Inp teks pencarian jurnal'), 'engineering', 0)
+
+Mobile.tap(findTestObject('Object Repository/Garuda/button/Klik search'), 0)
+
+Mobile.tap(findTestObject('Garuda/button/Btn Jurnal Engineering'), 0)
+
+Mobile.verifyElementExist(findTestObject('Garuda/verify/Journal Engineering'), 0)
 
