@@ -17,17 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('StartApp'), [:], FailureHandling.STOP_ON_FAILURE)
-
-Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('Garuda/button/Btn skip'), 0)
-
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('Object Repository/BIMA/button/Btn Lainnya'), 0)
-
-Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
+WebUI.callTestCase(findTestCase('BIMA/OpenModul'), [:], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.verifyElementExist(findTestObject('Object Repository/BIMA/verify/card pop up login'), 0)
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>New Test Case</name>
+   <name>SD-KamDek-01_003</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>6f15cf62-896b-4247-b8bf-f267b7a1aef7</testCaseGuid>
+   <testCaseGuid>115c345b-1964-4fe8-8f83-0e8d5d7c39da</testCaseGuid>
 </TestCaseEntity>

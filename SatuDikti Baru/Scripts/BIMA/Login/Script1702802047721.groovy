@@ -17,15 +17,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('BIMA/Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('StartApp'), [:], FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('BIMA/button/Btn beranda'), 0)
+Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('BIMA/button/Btn Lainnya'), 0)
-
-Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
+Mobile.tap(findTestObject('KamDek/button/Btn skip'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('BIMA/verify/halaman bima'), 0)
+Mobile.tap(findTestObject('BIMA/button/Btn Nav Profil'), 0)
+
+Mobile.tap(findTestObject('BIMA/button/Btn Login (1)'), 0)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.swipe(0, 350, 0, 0)
+
+Mobile.scrollToText('PDDIKTI - Pangkalan Data Pendidikan Tinggi. Copyright 2023', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/fild usrnm'), 0)
+
+Mobile.setText(findTestObject('Object Repository/BIMA/input username'), 'ahmadump@yahoo.co.id', 0)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/fild Password'), 0)
+
+Mobile.setText(findTestObject('Object Repository/BIMA/input password'), '481965ah', 0)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/btn Login'), 0)
+
+Mobile.getText(findTestObject('BIMA/button/Atb HiAHMAD'), 0)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/btn Setuju'), 0)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementExist(findTestObject('BIMA/button/Verify berhasil login'), 0)
 

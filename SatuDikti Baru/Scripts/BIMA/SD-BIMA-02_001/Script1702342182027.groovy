@@ -17,3 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('BIMA/SD-BIMA-01_002'), [:], FailureHandling.STOP_ON_FAILURE)
+
+Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/Btn Pelajari Selengkapnya'), 0)
+
+Mobile.verifyElementExist(findTestObject('BIMA/verify/Verify deskripsi modul bima'), 0)
+

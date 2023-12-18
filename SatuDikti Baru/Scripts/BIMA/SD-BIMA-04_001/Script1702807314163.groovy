@@ -27,5 +27,9 @@ Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('BIMA/verify/halaman bima'), 0)
+Mobile.swipe(0, 400, 0, 0)
+
+Mobile.tap(findTestObject('Object Repository/BIMA/button/Dropdown statistik profil'), 0)
+
+Mobile.verifyElementExist(findTestObject('Object Repository/BIMA/verify/Rincian profil saya'), 0)
 

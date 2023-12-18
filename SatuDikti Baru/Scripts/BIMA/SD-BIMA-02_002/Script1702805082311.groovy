@@ -17,15 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('BIMA/Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('BIMA/SD-BIMA-02_001'), [:], FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('BIMA/button/Btn beranda'), 0)
+Mobile.tap(findTestObject('BIMA/verify/Btn Kunjungi Web'), 0)
 
-Mobile.tap(findTestObject('BIMA/button/Btn Lainnya'), 0)
+Mobile.delay(5, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
-
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.verifyElementExist(findTestObject('BIMA/verify/halaman bima'), 0)
+Mobile.verifyElementExist(findTestObject('BIMA/verify/Verify Hal Web Bima'), 0)
 

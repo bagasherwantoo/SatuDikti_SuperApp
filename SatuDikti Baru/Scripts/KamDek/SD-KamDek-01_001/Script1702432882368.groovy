@@ -17,15 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('BIMA/Login'), [:], FailureHandling.STOP_ON_FAILURE)
-
-Mobile.tap(findTestObject('BIMA/button/Btn beranda'), 0)
-
-Mobile.tap(findTestObject('BIMA/button/Btn Lainnya'), 0)
-
-Mobile.tap(findTestObject('BIMA/button/Btn Bima'), 0)
+Mobile.startApplication('D:\\MAGANG\\Dokumentasi Manual Case Satudikti\\Sprint 13\\app-release-sprint13-v.4.apk', true)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('BIMA/verify/halaman bima'), 0)
+Mobile.tap(findTestObject('Object Repository/KamDek/button/Btn skip'), 0)
+
+Mobile.tap(findTestObject('Object Repository/KamDek/button/Btn kamdek'), 0)
+
+Mobile.verifyElementExist(findTestObject('Object Repository/KamDek/button/Halaman kamdek'), 0)
 
