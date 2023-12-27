@@ -21,19 +21,17 @@ WebUI.callTestCase(findTestCase('StartApp'), [:], FailureHandling.STOP_ON_FAILUR
 
 Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('KamDek/button/Btn skip'), 0)
+Mobile.tap(findTestObject('BIMA/verify/Button skip'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('BIMA/button/Btn Nav Profil'), 0)
 
-Mobile.tap(findTestObject('BIMA/button/Btn Login (1)'), 0)
+Mobile.tap(findTestObject('BIMA/button/Btn to login'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.swipe(0, 350, 0, 0)
-
-Mobile.scrollToText('PDDIKTI - Pangkalan Data Pendidikan Tinggi. Copyright 2023', FailureHandling.STOP_ON_FAILURE)
+Mobile.swipe(0, 500, 0, 0)
 
 Mobile.tap(findTestObject('Object Repository/BIMA/fild usrnm'), 0)
 
@@ -43,11 +41,11 @@ Mobile.tap(findTestObject('Object Repository/BIMA/fild Password'), 0)
 
 Mobile.setText(findTestObject('Object Repository/BIMA/input password'), '481965ah', 0)
 
-Mobile.tap(findTestObject('Object Repository/BIMA/btn Login'), 0)
+Mobile.tap(findTestObject('BIMA/Button - Login'), 0)
 
 Mobile.getText(findTestObject('BIMA/button/Atb HiAHMAD'), 0)
 
-Mobile.tap(findTestObject('Object Repository/BIMA/btn Setuju'), 0)
+Mobile.tap(findTestObject('BIMA/Button - Setuju'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 

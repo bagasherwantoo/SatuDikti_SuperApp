@@ -17,17 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('BIMA/SD-BIMA-04_001'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('BIMA/SD-BIMA-07_001'), [:], FailureHandling.STOP_ON_FAILURE)
+
+Mobile.swipe(0, 200, 0, 0)
+
+Mobile.tap(findTestObject('BIMA/verify/Lihat publikasi scopus'), 0)
 
 Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.swipe(0, 150, 0, 0)
+Mobile.verifyElementExist(findTestObject('BIMA/verify/Verify hal publikasi scopus'), 0)
 
-Mobile.tap(findTestObject('BIMA/button/Dropdown statistik profil'), 0)
+Mobile.swipe(0, 500, 0, 0)
 
-Mobile.tap(findTestObject('Object Repository/BIMA/verify/Lihat detail btn tab penelitian'), 0)
+Mobile.tap(findTestObject('BIMA/verify/Btn Kunjungi Web'), 0)
 
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.verifyElementExist(findTestObject('Object Repository/BIMA/verify/Verify hal daftar usulan penelitian'), 0)
+Mobile.verifyElementExist(findTestObject('BIMA/verify/Verify hal web sinta'), 0)
 
